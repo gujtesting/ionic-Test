@@ -1,32 +1,30 @@
-<ion-item>
+
     
-    <ion-row style="font-size:1.2rem;"> 
+    <ion-row style="font-size:1.5rem; background-color: white"> 
       <ion-col col-2 >
           
-                            <img src="data:image/png;base64,{{result.Photo}}" onerror="this.src='../../assets/imgs/profileimg.png';">
-
+              <img style=" border-radius: 50%;" src="https://via.placeholder.com/150" onerror="this.src='../../assets/imgs/profileimg.png';">
            
       </ion-col>
       <ion-col col-10>
           <ion-row>
               
-              <ion-col col-7 style="font-size:1.2rem;">
-                  <div class="textoverflow">{{result.CaseName}}</div>
+              <ion-col col-7 style="font-size:1.5rem;">
+                  <div class="textoverflow">Civil Miscellaneous Appeal NOW</div>
               </ion-col>
                <ion-col style="text-align: right;color: #3c2f61;" col-5>
-                  <ion-icon name="link"></ion-icon><span  (click)="ViewDetails(result)">{{result.CaseNo}}({{result.CaseNoYear}})</span><ion-icon class="custom-down" (click)="showConfirm(result.CaseName,$event)"></ion-icon>
+                  <ion-icon name="link"></ion-icon><span  (click)="ViewDetails(result)">1515(2018)</span><ion-icon class="custom-down" (click)="showConfirm(result.CaseName,$event)"></ion-icon>
                </ion-col>
           </ion-row>
-          <div style="font-size:1.2rem;"><b>{{result.ClientName}}</b></div>
-    <div text-center style="font-size:1.2rem;">VS</div>
-    <div style="font-size:1.2rem;">{{result.OtherPartyName}}</div>
+          <div style="font-size:1.5rem;"><b>DHANISHKUMAR PRAVINCHANDRA JARIWAJAL</b></div>
+    <div text-end style="font-size:1.5rem;margin-right:40px;color:#fb7979">VS</div>
+    <div style="font-size:1.5rem;">Aarna Rakesh</div>
 
     <ion-row >
       <ion-col (click)="openCaseHistory(result)"  >
-        <div style="font-size:1.2rem;"><ion-icon name="document" color="primary" ></ion-icon><span style="padding-left: 10px">Case History({{result.historycount}})</span></div>
-      </ion-col>
-      <ion-col  style="text-align:right">
-        <div style="font-size:1.2rem;" (click)='bookmarkthis(result,i)'><ion-icon name="bookmark" [color]="result.color" ></ion-icon><span style="padding-left: 10px">bookmark</span></div>
+        <div style="font-size:1.5rem;  display:inline;"><ion-icon name="document" color="primary" ></ion-icon><span style="padding-left: 10px">Case History(2304)</span></div>
+     
+        <div style="font-size:1.5rem;margin-left:20px ;  display:inline;" (click)='bookmarkthis(result,i)'><ion-icon name="bookmark" [color]="primary" ></ion-icon><span style="padding-left: 10px">bookmark</span></div>
 
       </ion-col>
       <ion-col  col-1>
@@ -35,6 +33,5 @@
     </ion-row>
       </ion-col>
     </ion-row>
-    
-    
-  </ion-item>
+      <div style="background-color:#e4dfdf;height:1px" ></div>
+ 

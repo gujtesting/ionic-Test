@@ -1,17 +1,383 @@
+<!--
+  Generated template for the CaseDetailsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
 <ion-header>
+
   <ion-navbar>
-    <ion-title>
-      Contact
-    </ion-title>
+    <ion-title>CaseDetails</ion-title>
   </ion-navbar>
+
 </ion-header>
 
-<ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
+
+<ion-content padding>
+  <ion-row>
+      <ion-col col-2 >
+          
+              <img style=" border-radius: 50%;" src="https://via.placeholder.com/150" onerror="this.src='../../assets/imgs/profileimg.png';">
+           
+      </ion-col>
+    <ion-col col-10>
+       <ion-row>
+              
+              <ion-col col-7 style="font-size:1rem;">
+                  <div class="textoverflow">Civil Miscellaneous Appeal NOW</div>
+              </ion-col>
+               <ion-col style="text-align: right;color: #3c2f61;" col-5>
+                  1515(2018)
+               </ion-col>
+          </ion-row>
+      <ion-row>
+        <ion-col col-9>
+          <div style="font-size:1.0rem;"><b>DHANISHKUMAR PRAVINCHANDRA JARIWAJAL</b></div>
+        </ion-col>
+        <ion-col class="vl" col-3>
+          <div text-center style="font-size:1.0rem;color: #25a69a"><b>Applicant</b></div>
+        </ion-col>
+      </ion-row>
+         <ion-row></ion-row>
+         <ion-row>
+        <ion-col col-9>
+           <div style="font-size:1.0rem;">Aarna Rakesh</div>
+         </ion-col>
+         <ion-col class="vl" col-3>
+           <div text-center style="font-size:1.0rem;color: #ffad35"><b>Complainant</b></div>
+        </ion-col>
+         </ion-row>
+        
+    
+    </ion-col>
+       
+
+  </ion-row>
+  <ion-row no-padding>
+    <ion-col col-2>
+     
+      <div  style="font-size:1.0rem">Ot.Advo.</div>
+    </ion-col>
+    <ion-col>
+      <b>**result.OtherPartyAdvocateName@@</b>
+    </ion-col>
+  </ion-row>
+
+  
+    <ion-row>
+      <ion-col col-2>
+              <div  style="font-size:1.0rem">Stage</div>
+
+       
+      </ion-col>
+      <ion-col col-10>
+        <b>**result.CaseStageName@@</b>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-2>
+          <div  style="font-size:1.0rem">File Name</div>
+       
+      </ion-col>
+      <ion-col col-10>
+        <b>**result.FileName@@</b>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-2>
+        <div  style="font-size:1.0rem">File No.</div>
+       
+      </ion-col>
+      <ion-col col-10>
+        <b>**result.FileNo@@</b>
+      </ion-col>
+    </ion-row>
+
+
+
+
+    <ion-row>
+      <ion-col col-2>
+        <div  style="font-size:1.0rem">Category</div>
+        
+      </ion-col>
+      <ion-col col-10>
+        <b>**result.Category@@</b>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-2>
+        <div  style="font-size:1.0rem">Group</div>
+        
+      </ion-col>
+      <ion-col col-10>
+        <b>**result.Group@@</b>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-2>
+         <div  style="font-size:1.0rem">Sub Group</div>
+      
+      </ion-col>
+      <ion-col col-10>
+        <b>**result.SubGroup@@</b>
+      </ion-col>
+    </ion-row>
+ 
+
+
+  
+    <ion-row>
+      <ion-col col-2>
+         <div  style="font-size:1.0rem">Note</div> 
+      </ion-col>
+      <ion-col col-10>
+        <b>**result.Notes@@</b>
+      </ion-col>
+    </ion-row>
+
+
+
+    <ion-row>
+      <ion-col col-2>
+        <div  style="font-size:1.0rem">Pr. Date</div> 
+        
+      </ion-col>
+      <ion-col col-10>
+        <b>**result.LastHearingDate | dateformat@@</b>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-2>
+        <div  style="font-size:1.0rem">Cr. Date</div> 
+      </ion-col>
+      <ion-col col-10>
+        <b> **result.HearingDate | dateformat@@</b>
+      </ion-col>
+    </ion-row>
+  
+
+  <h5 (click)='toggleview()' style="color:#e62228 ;margin-left: 20px">More Info</h5>
+  <ion-item *ngIf='Viewmore'>
+
     <ion-item>
-      <ion-icon name="ionic" item-left></ion-icon>
-      @ionicframework
+      <ion-row>
+        <ion-col col-2>
+          <div  style="font-size:1.0rem">File Date</div> 
+        </ion-col>
+        <ion-col col-10>
+          <b> **result.FileDate | dateformat@@</b>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-2>
+          <div  style="font-size:1.0rem">Registration Date</div> 
+          
+        </ion-col>
+        <ion-col col-10>
+          <b> **result.RegistrationDate | dateformat@@</b>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-2>
+          <div  style="font-size:1.0rem">CourtFee</div> 
+          
+        </ion-col>
+        <ion-col col-10>
+          <b> **result.CourtFee@@</b>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-2>
+          <div  style="font-size:1.0rem">Claim Amount</div> 
+          
+        </ion-col>
+        <ion-col col-10>
+          <b>**result.ClaimAmount@@</b>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-2>
+          <div  style="font-size:1.0rem">Advocate Fees</div> 
+          
+        </ion-col>
+        <ion-col col-10>
+          <b>**result.AdvocateFee@@</b>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-2>
+          <div  style="font-size:1.0rem">Act Name</div> 
+          
+        </ion-col>
+        <ion-col col-10>
+          <b>**result.ActName@@</b>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-2>
+          Details
+        </ion-col>
+        <ion-col col-10>
+          <b>**result.Details@@</b>
+        </ion-col>
+      </ion-row>
     </ion-item>
-  </ion-list>
+
+
+    <ion-item>
+      <ion-row>
+        <ion-col col-2>
+          Company FileNo
+        </ion-col>
+        <ion-col col-10>
+          <b>**result.CompanyFileNo@@</b>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-2>
+          Vehicle No
+        </ion-col>
+        <ion-col col-10>
+          <b>**result.VehicleNo@@</b>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-2>
+          Vehicle Type
+        </ion-col>
+        <ion-col col-10>
+          <b>**result.VehicleType@@</b>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-2>
+          Permit
+        </ion-col>
+        <ion-col col-10>
+          <b>**result.Permit@@</b>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-2>
+          Fitness
+        </ion-col>
+        <ion-col col-10>
+          <b>**result.Fitness@@</b>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-2>
+          Nature of Harm
+        </ion-col>
+        <ion-col col-10>
+          <b>**result.NatureOfHarm@@</b>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-2>
+          Result
+        </ion-col>
+        <ion-col col-10>
+          <b>**result.Result@@</b>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-2>
+          Accident Date
+        </ion-col>
+        <ion-col col-10>
+          <b>**result.AccidentDate@@</b>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+
+
+
+    <ion-item>
+      <ion-row>
+        <ion-col col-2>
+          PoliceStation
+        </ion-col>
+        <ion-col col-10>
+          <b>**result.PoliceStationName@@</b>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-2>
+          FRI No
+        </ion-col>
+        <ion-col col-10>
+          <b>**result.FRINo@@</b>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-2>
+          State
+        </ion-col>
+        <ion-col col-10>
+          <b>**result.PoliceStationState@@</b>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-2>
+          District
+        </ion-col>
+        <ion-col col-10>
+          <b>**result.PoliceStationDistrict@@</b>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-2>
+          City
+        </ion-col>
+        <ion-col col-10>
+          <b>**result.PoliceStationCity@@</b>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-2>
+          Area
+        </ion-col>
+        <ion-col col-10>
+          <b>**result.PoliceStationArea@@</b>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-2>
+          Phone No
+        </ion-col>
+        <ion-col col-10>
+          <b>**result.PoliceStationNumber@@</b>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-2>
+          Email
+        </ion-col>
+        <ion-col col-10>
+          <b>**result.PoliceStationEmail@@</b>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+  </ion-item>
+
+
+ 
 </ion-content>
+<ion-footer >
+  <ion-row *ngIf="isdisposed">
+    <ion-col width-50 style="text-align: center">
+      <button ion-button width-50 (click)='goToDispose()' color="white">
+        <ion-icon color="primary" name="archive" padding></ion-icon>
+        <span style="color: #225a84">Archive</span>
+      </button>
+    </ion-col>
+    <ion-col width-50 style="text-align: center">
+      <button ion-button width-50 (click)='goToNextDate()' color="white"> 
+        <ion-icon color="primary" name="share-alt" padding></ion-icon>
+        <span style="color: #225a84">Next Date</span>
+      </button>
+    </ion-col>
+  </ion-row>
+</ion-footer>

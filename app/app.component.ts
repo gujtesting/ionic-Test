@@ -3,6 +3,7 @@ import { Platform } from 'ionic-angular';
 
 import { TabsPage } from '../pages/tabs/tabs';
 
+import { ContactPage } from '../pages/contact/contact';
 @Component({
   templateUrl: 'app.html'
 })

@@ -1,0 +1,18 @@
+.textoverflow{
+        text-overflow: ellipsis;
+        overflow: hidden; 
+        font-size:1.2rem;
+        white-space: nowrap;
+       }
+       .oneline{
+          clear: both;
+    display: inline-block;
+    overflow: hidden;
+
+    white-space: nowrap;
+       }
+
+       
+    .vl{
+        border-left: 1px solid crimson;
+    }
