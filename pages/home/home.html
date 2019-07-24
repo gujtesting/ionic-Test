@@ -1,11 +1,39 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
-</ion-header>
+<ion-item>
+    
+    <ion-row>
+      <ion-col col-1>
+          
+              <img src="https://via.placeholder.com/150" onerror="this.src='../../assets/imgs/profileimg.png';">
+           
+      </ion-col>
+      <ion-col col-11>
+          <ion-row>
+              
+              <ion-col col-7 >
+                  <h2 class="textoverflow">**result.CaseName@@aaaaaaaa </h2>
+              </ion-col>
+               <ion-col style="text-align: right;color: #3c2f61;" col-5>
+                  <ion-icon name="link"></ion-icon><span  (click)="ViewDetails(result)"> **result.CaseNo@@(**result.CaseNoYear@@) </span><ion-icon class="custom-down" (click)="showConfirm(result.CaseName,$event)"></ion-icon>
+               </ion-col>
+          </ion-row>
+          <h2><b>**result.ClientName@@</b></h2>
+    <h3 text->VS</h3>
+    <p>**result.OtherPartyName@@</p>
 
-<ion-content padding class="my">
- 
- <div class="my">asdasdasdasdasd</div>
- <ion-icon class="custom-mobile"></ion-icon>
-</ion-content>
+    <ion-row >
+      <ion-col (click)="openCaseHistory(result)"  style="background-color: rgb(126, 126, 214)">
+        <h3><ion-icon name="document" color="primary" ></ion-icon><span style="padding-left: 10px">Case History(**result.historycount@@)</span></h3>
+      </ion-col>
+      <ion-col  style="background-color: rgb(126, 126, 214);text-align:right">
+        <h3 (click)='bookmarkthis(result,i)'><ion-icon name="bookmark" [color]="primary" ></ion-icon><span style="padding-left: 10px">bookmark</span></h3>
+
+      </ion-col>
+      <ion-col style="float: right;" col-1>
+          <ion-icon name="share" (click)='sharethis()'></ion-icon>
+      </ion-col>
+    </ion-row>
+      </ion-col>
+    </ion-row>
+    
+    
+  </ion-item>
