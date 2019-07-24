@@ -1,11 +1,144 @@
+<!--
+  Generated template for the NextDatePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
 <ion-header>
+
   <ion-navbar>
-    <ion-title>
-      About
-    </ion-title>
+    <ion-title>NextDate</ion-title>
   </ion-navbar>
+
 </ion-header>
 
+
 <ion-content padding>
+   <ion-col col-2 >
+          
+              <img style=" border-radius: 50%;padding: 10px" src="https://via.placeholder.com/150" onerror="this.src='../../assets/imgs/profileimg.png';">
+           
+      </ion-col>
+    <ion-col col-10>
+       <ion-row>
+              
+              <ion-col col-7 style="font-size:1.5rem;">
+                  <div class="textoverflow">**result.CaseName@@</div>
+              </ion-col>
+               <ion-col style="text-align: right;color: #3c2f61;" col-5>
+                **result.CaseNo@@(**result.CaseNoYear@@)
+               </ion-col>
+          </ion-row>
+      <ion-row>
+        <ion-col col-9>
+          <div style="font-size:1.5rem;"><b>**result.ClientName@@</b></div>
+        </ion-col>
+        <ion-col class="vl" col-3>
+          <div text-center style="font-size:1.5rem;color: #25a69a"><b>**result.ClientType@@</b></div>
+        </ion-col>
+      </ion-row>
+         <ion-row></ion-row>
+         <ion-row>
+        <ion-col col-9>
+           <div style="font-size:1.5rem;">**result.OtherPartyName@@</div>
+         </ion-col>
+         <ion-col class="vl" col-3>
+           <div text-center style="font-size:1.5rem;color: #ffad35"><b>**result.OtherPartyType@@</b></div>
+        </ion-col>
+         </ion-row>
+        
+    
+    </ion-col>
+       
+
+  </ion-row>
+
+
+
+    
+        
+        
+           
+            <ion-row>
+                <ion-col col-3 style="text-align: center">
+                    Court
+                </ion-col>
+                <ion-col>
+                    <ion-item  class="myitem">
+                        <ion-label></ion-label>
+
+                        <ion-select [(ngModel)]="courtValue1" interface='alert' style="max-width: 100% !important;">
+                            <ion-option *ngFor="let court of courts;let i=index" value="**i@@" [selected]="i ==selectedcourtindex">**court.Name@@</ion-option>
+                          </ion-select>
+                      </ion-item>
+                </ion-col>
+              </ion-row>
+     
+     
+            <ion-row>
+              <ion-col col-3 style="text-align: center">
+                  Stage
+              </ion-col>
+              <ion-col>
+                  <ion-item  class="myitem">
+                      <ion-label></ion-label>
+                      <ion-select [(ngModel)]="stageValue" interface='alert' style="max-width: 100% !important;">
+                          <ion-option *ngFor="let stage of stages;let i=index" value="**stage@@" [selected]="i ==selectedstageindex">**stage@@</ion-option>
+                          
+                        </ion-select>
+                    </ion-item>
+              </ion-col>
+            </ion-row>
+              
+            <ion-row>
+                <ion-col col-3 style="text-align: center">
+                  Date
+                </ion-col>
+                <ion-col >
+                    
+                    <ion-item   (click)="picker.open()"    class="myitem">
+                    
+                      
+                            <ion-datetime #picker pickerFormat="DD/MM/YYYY" min='**mindate@@' [(ngModel)]="datePicker" ></ion-datetime>
+
+                        
+                        
+                            <ion-icon name="calendar" ></ion-icon>
+                        
+                      
+                        
+                      </ion-item>
+                      
+                    <!-- <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="myDate" min='**mindate@@' class="myitem"><ion-icon name="star" item-right></ion-icon></ion-datetime> -->
+          
+                </ion-col>
+              </ion-row>
+           
+              <ion-row>
+                  <ion-col col-3 style="text-align: center">
+                    Note
+                  </ion-col>
+                  <ion-col>
+                      <ion-textarea [(ngModel)]="myitem" placeholder="Enter more information here..." class="myitem" rows="5"></ion-textarea>
+                  </ion-col>
+                </ion-row>
+                <ion-item>
+                  <ion-label>Send SMS</ion-label>
+                  <ion-checkbox color="dark" [(ngModel)]="senssms" checked='senssms'></ion-checkbox>
+                </ion-item>
+                <ion-footer style="border-top: indianred;border-style: solid;border-width: 2px">
+                  <ion-row>
+                    <ion-col style="text-align: center">
+                        <button ion-button color="white" ion-button navPop><ion-icon name="trash" padding ></ion-icon>Cancel</button>
+                    </ion-col>
+                    <ion-col style="text-align: center" >
+                        <button ion-button color="white" (click)='setNextdate()'><ion-icon name="done-all" padding></ion-icon>Next Date</button>
+                    </ion-col>
+                  </ion-row>
+                    
+                  </ion-footer>
+   
+
+
 
 </ion-content>
