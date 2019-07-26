@@ -1,0 +1,155 @@
+page-process {
+
+    
+.center {
+    margin-left: auto;
+       margin-right: auto;
+    display: block;
+    margin-Top:10px;
+    background-color: white;
+}
+.effect{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.tabbar a[aria-selected=true] {
+    border-bottom: 2px;
+    border-style: solid;
+    font-weight: bold;
+
+    
+}
+.imageview {     
+    width:100% !important;  
+    height : 100% !important;  
+    max-width: 100px !important;  
+    max-height: 100px !important;  
+    }
+    .topcorner{
+        position:absolute;
+        top:15px;
+        right:20px;
+        padding: 2px;
+        background-color: #ffffff;
+        border-radius: 3px;
+        padding-left:3px;
+        padding-right:3px;  
+       }
+
+
+       .lines{
+        border-bottom: 2px;
+        border-style: solid;
+        border-color: black;
+        background-color: bisque
+       }
+
+       .normal{
+           background-color: bisque
+       }
+
+
+       .textoverflow{
+        text-overflow: ellipsis;
+        overflow: hidden; 
+        width: 160px; 
+        height: 1.2em; 
+        white-space: nowrap;
+       }
+
+
+body,
+html,
+.wrapper {
+  width: 100%;
+  height: 100%;
+}
+.wrapper {
+  position: relative;
+  background: #e7f0f7;
+}
+.progressbar {
+  display: block;
+  position: absolute;
+  z-index: 9;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 80%;
+  height: 10px;
+}
+.progressbar::before,
+.progressbar::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  background-image: linear-gradient(90deg, #031f4b 0%, #04396c 20%, #031f4b 20%, #035b96 40%, #031f4b 40%, #6497b1 60%, #031f4b 60%, #60bafd 80%, #031f4b 80%, #93d1ff 100%);
+  background-position: 0 0;
+  background-repeat: repeat-x;
+  -webkit-animation: movebar 5s linear infinite;
+          animation: movebar 5s linear infinite;
+}
+.progressbar::before {
+  box-shadow: 0 6px 10px 0 rgba(0,0,0,0.1);
+}
+.progressbar::after {
+  z-index: 9;
+  top: 6px;
+  -webkit-filter: blur(16px);
+          filter: blur(16px);
+  opacity: 0.7;
+}
+.stylization {
+  position: absolute;
+  z-index: 999;
+  height: 4px;
+  width: 90%;
+  left: 5%;
+  top: 3px;
+  opacity: 0.3;
+}
+.stylization::before,
+.stylization::after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 4px;
+  top: 0;
+  border-radius: 2px;
+}
+.stylization::before {
+  background: #fff;
+  left: 0;
+  right: 10px;
+}
+.stylization::after {
+  width: 6px;
+  background: #fff;
+  right: 0;
+}
+@-webkit-keyframes movebar {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 400px 0;
+  }
+}
+@keyframes movebar {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 400px 0;
+  }
+}
+
+
+}
